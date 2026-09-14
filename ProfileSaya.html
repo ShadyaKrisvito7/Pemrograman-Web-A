@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Diri - Shadya Krisvito Setiawan</title>
+
     <style>
-        
         body {
             background-color: #f8fafc;
             color: black;
@@ -14,20 +14,25 @@
             padding: 20px;
             line-height: 1.6;
         }
+
         .text-center {
             text-align: center;
         }
+
         img {
             display: block;
             margin: 20px auto;
             border-radius: 8px;
             object-fit: cover;
         }
-        section {
+
+        section,
+        article {
             margin-bottom: 30px;
             border-bottom: 2px solid black;
             padding-bottom: 20px;
         }
+
         /* Styling untuk Tabel */
         table {
             margin: 0 auto;
@@ -35,140 +40,202 @@
             width: 90%;
             max-width: 500px;
         }
-        table, th, td {
+
+        table,
+        th,
+        td {
             border: 2px solid black;
         }
+
         td {
             padding: 10px;
         }
+
         .bg-grey {
             background-color: slateblue;
         }
+
         /* Styling Link */
         a {
             color: #005bb6;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-       ul {
+
+        ul {
             display: flex;
-            justify-content: center; 
+            justify-content: center;
             list-style-type: none;
             gap: 20px;
             padding: 0;
             margin: 0;
         }
-        .center-content{
+
+        .center-content {
             text-align: center;
         }
     </style>
 </head>
 
 <body>
+
     <header>
+
         <h1 class="text-center">PROFILE DIRI SAYA</h1>
+
         <hr>
+
         <div class="center-content">
-        <nav>
+            <nav>
                 <ul>
-                    <li><a href="#tentang">tentang</a></li>
-                    <li><a href="#hobi">hobi</a></li>
-                    <li><a href="#pendidikan">pendidikan</a></li>
-                    <li><a href="#kontak">kontak</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#hobi">Hobi</a></li>
+                    <li><a href="#pendidikan">Pendidikan</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
                 </ul>
-        </nav>
+            </nav>
         </div>
-        
+
         <img src="poto.jpeg" alt="Foto Shadya" width="150" height="200">
-        
-             <section>
-            
+
+        <!-- Div digunakan karena hanya sebagai pembungkus tabel -->
+        <div>
             <table>
                 <tr class="bg-grey">
                     <td><b>Nama</b></td>
                     <td>Shadya Krisvito Setiawan</td>
                 </tr>
+
                 <tr>
                     <td><b>Asal</b></td>
                     <td>Kalimantan Tengah</td>
                 </tr>
+
                 <tr class="bg-grey">
                     <td><b>Jurusan</b></td>
                     <td>Informatika</td>
                 </tr>
+
                 <tr>
                     <td><b>Umur</b></td>
                     <td>19 Tahun</td>
                 </tr>
+
                 <tr class="bg-grey">
                     <td><b>Hobi</b></td>
                     <td>Bermain Game dan Mendengarkan Musik</td>
                 </tr>
             </table>
-        </section>
+        </div>
+
     </header>
 
+
     <main>
+
+        <!-- SECTION TENTANG -->
         <section id="tentang">
-        <h2>TENTANG SAYA</h2>
-        <p>
-            Halo, perkenalkan nama saya Shadya Krisvito Setiawan. Saya berasal dari Kalimantan Tengah
-            dan saat ini sedang menempuh pendidikan di jurusan Informatika. Saya orang yang senang
-            belajar hal baru, terutama yang berkaitan dengan teknologi, dan suka menghabiskan waktu
-            luang dengan bermain game serta mendengarkan musik.
-        </p>
-        <p>
-            Selama menempuh pendidikan, saya tertarik mempelajari dasar-dasar pemrograman dan
-            pengembangan web sebagai bagian dari perkuliahan di jurusan Informatika. Pengalaman ini
-            membuat saya semakin ingin memperdalam kemampuan di bidang teknologi informasi.
-        </p>
-    </section>
 
-    <article>
-        <h2>PENGALAMAN DAN TUJUAN</h2>
-        <p>
-            Sebagai mahasiswa Informatika, saya mulai mempelajari berbagai hal yang
-            berkaitan dengan teknologi dan pemrograman. Walaupun masih dalam tahap
-            belajar, saya terus mencoba memahami cara membuat program dan website
-            sederhana.
-        </p>
-        <p>
-            Ke depannya, saya ingin meningkatkan kemampuan saya dalam bidang
-            pemrograman dan pengembangan web. Saya berharap ilmu yang saya pelajari
-            selama kuliah dapat menjadi bekal untuk mengembangkan kemampuan dan
-            mencapai tujuan saya di bidang teknologi.
-        </p>
-    </article>
+            <h2>TENTANG SAYA</h2>
 
+            <p>
+                Halo, perkenalkan nama saya Shadya Krisvito Setiawan. Saya berasal
+                dari Kalimantan Tengah dan saat ini sedang menempuh pendidikan di
+                jurusan Informatika. Saya orang yang senang belajar hal baru,
+                terutama yang berkaitan dengan teknologi, dan suka menghabiskan
+                waktu luang dengan bermain game serta mendengarkan musik.
+            </p>
+
+            <p>
+                Selama menempuh pendidikan, saya tertarik mempelajari dasar-dasar
+                pemrograman dan pengembangan web sebagai bagian dari perkuliahan
+                di jurusan Informatika. Pengalaman ini membuat saya semakin ingin
+                memperdalam kemampuan di bidang teknologi informasi.
+            </p>
+
+        </section>
+
+
+        <!-- ARTICLE -->
+        <article>
+
+            <h2>PENGALAMAN DAN TUJUAN</h2>
+
+            <p>
+                Sebagai mahasiswa Informatika, saya mulai mempelajari berbagai hal
+                yang berkaitan dengan teknologi dan pemrograman. Walaupun masih
+                dalam tahap belajar, saya terus mencoba memahami cara membuat
+                program dan website sederhana.
+            </p>
+
+            <p>
+                Ke depannya, saya ingin meningkatkan kemampuan saya dalam bidang
+                pemrograman dan pengembangan web. Saya berharap ilmu yang saya
+                pelajari selama kuliah dapat menjadi bekal untuk mengembangkan
+                kemampuan dan mencapai tujuan saya di bidang teknologi.
+            </p>
+
+        </article>
+
+
+        <!-- SECTION PENDIDIKAN -->
         <section id="pendidikan">
+
             <h2>PENDIDIKAN</h2>
+
             <ol>
                 <li>SD NEGERI 6 LANGKAI PALANGKA RAYA</li>
                 <li>SMP NEGERI 2 PALANGKA RAYA</li>
                 <li>SMA NEGERI 4 PALANGKA RAYA</li>
             </ol>
+
         </section>
 
+
+        <!-- SECTION HOBI -->
         <section id="hobi">
+
             <h2>HOBI</h2>
+
             <ol>
                 <li>Bermain Game</li>
                 <li>Mendengarkan Musik</li>
                 <li>Traveling</li>
             </ol>
+
         </section>
 
     </main>
 
+
+    <!-- FOOTER -->
     <footer class="text-center">
+
         <section id="kontak">
-        <h2>KONTAK</h2>
-        <p>Email: <a href="mailto:shadya0706@gmail.com">shadya0706@gmail.com</a></p>
-        <p><a href="https://www.instagram.com/pitpito_?igsi=MXZ1NnphejZpanp4cw==" target="_blank" rel="noopener noreferrer">Instagram Saya</a></p>
-    </footer>
+
+            <h2>KONTAK</h2>
+
+            <p>
+                Email:
+                <a href="mailto:shadya0706@gmail.com">
+                    shadya0706@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <a href="https://www.instagram.com/pitpito_?igsi=MXZ1NnphejZpanp4cw=="
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram Saya
+                </a>
+            </p>
+
         </section>
+
+    </footer>
 
 </body>
 </html>
