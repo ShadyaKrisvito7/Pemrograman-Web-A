@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8fafc;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-width: 100%; 
+    height: auto;
+}
+
+section,
+article {
+    margin-bottom: 30px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+}
+
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+}
+
+td {
+    padding: 10px;
+}
+
+.bg-grey {
+    background-color: slateblue;
+}
+
+
+a {
+    color: #005bb6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    list-style-type: none;
+    gap: 20px;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.center-content {
+    text-align: center;
+}
+
+
+.daftar-artikel {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+.daftar-artikel section {
+    margin-bottom: 0; 
+}
+
+
+
+
+@media (min-width: 768px) {
+    .daftar-artikel {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+@media (min-width: 992px) {
+    body {
+        max-width: 900px;
+        margin: 0 auto; 
+    }
+}
