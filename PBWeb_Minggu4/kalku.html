@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana Praktikum JS</title>
+</head>
+<body>
+
+    <h3>Kalkulator Sederhana</h3>
+
+    
+    <table>
+        <tr>
+            <td><label for="bil1">Bilangan 1</label></td>
+            <td>:</td>
+            <td><input type="number" id="bil1" placeholder="Masukkan angka"></td>
+        </tr>
+        <tr>
+            <td><label for="bil2">Bilangan 2</label></td>
+            <td>:</td>
+            <td><input type="number" id="bil2" placeholder="Masukkan angka"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <button type="button" onclick="hitungTambah()">Penjumlahan (+)</button>
+                <button type="button" onclick="hitungKurang()">Pengurangan (-)</button>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="hasil">Hasil</label></td>
+            <td>:</td>
+            <td><input type="text" id="hasil" readonly></td>
+        </tr>
+    </table>
+
+    <script>
+        function hitungTambah() {
+            
+            var val1 = document.getElementById('bil1').value;
+            var val2 = document.getElementById('bil2').value;
+
+            
+            var num1 = parseFloat(val1);
+            var num2 = parseFloat(val2);
+
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('hasil').value = 'Isi kedua bilangan!';
+                return;
+            }
+
+            
+            var total = num1 + num2;
+
+            
+            document.getElementById('hasil').value = total;
+        }
+
+        
+        function hitungKurang() {
+            
+            var val1 = document.getElementById('bil1').value;
+            var val2 = document.getElementById('bil2').value;
+
+            
+            var num1 = parseFloat(val1);
+            var num2 = parseFloat(val2);
+
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('hasil').value = 'Isi kedua bilangan!';
+                return;
+            }
+
+            
+            var total = num1 - num2;
+
+            
+            document.getElementById('hasil').value = total;
+        }
+    </script>
+
+</body>
+</html>
