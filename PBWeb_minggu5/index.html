@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Diri - Shadya Krisvito Setiawan</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <h1 class="text-center">PROFILE DIRI SAYA</h1>
+
+        <hr>
+
+        <div class="center-content">
+            <nav>
+                <ul>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#hobi">Hobi</a></li>
+                    <li><a href="#pendidikan">Pendidikan</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+
+            <!-- Modul 4: tombol dark mode & tampil/sembunyi aside -->
+            <button id="btn-tema">Mode Gelap</button>
+            <button id="btn-info">Info Tambahan</button>
+        </div>
+
+        <img src="poto.jpeg" alt="Foto Shadya" width="150" height="200">
+
+        <!-- Div digunakan karena hanya sebagai pembungkus tabel -->
+        <div>
+            <table>
+                <tr class="bg-grey">
+                    <td><b>Nama</b></td>
+                    <td>Shadya Krisvito Setiawan</td>
+                </tr>
+
+                <tr>
+                    <td><b>Asal</b></td>
+                    <td>Kalimantan Tengah</td>
+                </tr>
+
+                <tr class="bg-grey">
+                    <td><b>Jurusan</b></td>
+                    <td>Informatika</td>
+                </tr>
+
+                <tr>
+                    <td><b>Umur</b></td>
+                    <td>19 Tahun</td>
+                </tr>
+
+                <tr class="bg-grey">
+                    <td><b>Hobi</b></td>
+                    <td>Bermain Game dan Mendengarkan Musik</td>
+                </tr>
+            </table>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        
+        <section id="tentang">
+
+            <h2>TENTANG SAYA</h2>
+
+            <p>
+                Halo, perkenalkan nama saya Shadya Krisvito Setiawan. Saya berasal
+                dari Kalimantan Tengah dan saat ini sedang menempuh pendidikan di
+                jurusan Informatika. Saya orang yang senang belajar hal baru,
+                terutama yang berkaitan dengan teknologi, dan suka menghabiskan
+                waktu luang dengan bermain game serta mendengarkan musik.
+            </p>
+
+            <p>
+                Selama menempuh pendidikan, saya tertarik mempelajari dasar-dasar
+                pemrograman dan pengembangan web sebagai bagian dari perkuliahan
+                di jurusan Informatika. Pengalaman ini membuat saya semakin ingin
+                memperdalam kemampuan di bidang teknologi informasi.
+            </p>
+
+        </section>
+
+
+        <!-- ASIDE (Modul 4 - Langkah 3) -->
+        <aside>
+            <h2>INFO TAMBAHAN</h2>
+            <p>
+                Halaman ini dibuat sebagai bagian dari praktikum Pemrograman
+                Berbasis Web. Tekan tombol <b>D</b> pada keyboard untuk
+                mengganti mode gelap/terang.
+            </p>
+        </aside>
+
+        <!-- PORTOFOLIO / PENGALAMAN (dirender dari array di script.js) -->
+        <section id="portofolio">
+
+            <h2>PENGALAMAN DAN TUJUAN</h2>
+
+            <button id="btn-tambah">Tambah Item Portofolio</button>
+
+            <div id="daftar-portofolio" class="daftar-artikel-dinamis"></div>
+
+        </section>
+
+        <div class="daftar-artikel">
+            
+            <section id="pendidikan">
+
+                <h2>PENDIDIKAN</h2>
+
+                <ol>
+                    <li>SD NEGERI 6 LANGKAI PALANGKA RAYA</li>
+                    <li>SMP NEGERI 2 PALANGKA RAYA</li>
+                    <li>SMA NEGERI 4 PALANGKA RAYA</li>
+                </ol>
+
+            </section>
+
+
+            
+            <section id="hobi">
+
+                <h2>HOBI</h2>
+
+                <ol>
+                    <li>Bermain Game</li>
+                    <li>Mendengarkan Musik</li>
+                    <li>Traveling</li>
+                </ol>
+
+            </section>
+        </div>
+
+
+        <!-- KOMENTAR (Modul 5) -->
+        <section id="komentar">
+
+            <h2>Tinggalkan Komentar</h2>
+
+            <form id="form-komentar" novalidate>
+                <input type="text" id="input-nama" placeholder="Nama Anda" required>
+                <textarea id="input-pesan" placeholder="Tulis komentar..." required></textarea>
+                <p id="pesan-error" class="pesan-error"></p>
+                <button type="submit">Kirim</button>
+            </form>
+
+            <button id="btn-hapus-semua">Hapus Semua Komentar</button>
+
+            <ul id="daftar-komentar"></ul>
+
+        </section>
+
+    </main>
+
+
+    
+    <footer class="text-center">
+
+        <section id="kontak">
+
+            <h2>KONTAK</h2>
+
+            <p>
+                Email:
+                <a href="mailto:shadya0706@gmail.com">
+                    shadya0706@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <a href="https://www.instagram.com/pitpito_?igsi=MXZ1NnphejZpanp4cw=="
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram Saya
+                </a>
+            </p>
+
+        </section>
+
+    </footer>
+
+    <button id="btn-atas" class="btn-atas" aria-label="Kembali ke atas">&uarr; Atas</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

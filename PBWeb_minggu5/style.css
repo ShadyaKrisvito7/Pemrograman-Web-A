@@ -1,0 +1,262 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8fafc;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-width: 100%; 
+    height: 200px;
+    object-position: center;
+}
+
+section,
+article {
+    margin-bottom: 30px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+}
+
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+}
+
+td {
+    padding: 10px;
+}
+
+.bg-grey {
+    background-color: slateblue;
+}
+
+
+a {
+    color: #005bb6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    list-style-type: none;
+    gap: 20px;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.center-content {
+    text-align: center;
+}
+
+
+.daftar-artikel {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+.daftar-artikel section {
+    margin-bottom: 0; 
+}
+
+
+
+
+@media (min-width: 768px) {
+    .daftar-artikel {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+@media (min-width: 992px) {
+    body {
+        max-width: 900px;
+        margin: 0 auto; 
+    }
+}
+
+/* ==========================================================
+   MODUL 4 & 5 - Interaktivitas JavaScript
+   ========================================================== */
+
+/* Tombol umum */
+button {
+    padding: 8px 14px;
+    margin: 6px 4px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e2e8f0;
+}
+
+/* Modul 4 - Dark mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+body.dark-mode section,
+body.dark-mode article {
+    border-bottom-color: #f2f2f2;
+}
+
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+    border-color: #f2f2f2;
+}
+
+body.dark-mode a {
+    color: #7db7ff;
+}
+
+body.dark-mode button {
+    background-color: #333333;
+    color: #f2f2f2;
+    border-color: #f2f2f2;
+}
+
+body.dark-mode button:hover {
+    background-color: #4a4a4a;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #2b2b2b;
+    color: #f2f2f2;
+    border-color: #f2f2f2;
+}
+
+/* Modul 4 - Aside tampil/sembunyi */
+aside {
+    border: 2px dashed black;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+body.dark-mode aside {
+    border-color: #f2f2f2;
+}
+
+.tersembunyi {
+    display: none;
+}
+
+/* Modul 4 - Item portofolio dinamis */
+article time {
+    display: block;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+body.dark-mode article time {
+    color: #bbbbbb;
+}
+
+/* Modul 5 - Efek hover artikel */
+.artikel-hover {
+    background-color: #eef4fb;
+}
+
+body.dark-mode .artikel-hover {
+    background-color: #2a3a4d;
+}
+
+/* Modul 5 - Form komentar */
+#form-komentar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin-bottom: 15px;
+}
+
+#form-komentar input,
+#form-komentar textarea {
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+#form-komentar textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.pesan-error {
+    color: #c0392b;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+}
+
+body.dark-mode .pesan-error {
+    color: #ff8a80;
+}
+
+/* ul global memakai flex (untuk nav), jadi daftar komentar dikembalikan ke blok */
+#daftar-komentar {
+    display: block;
+    margin-top: 15px;
+}
+
+#daftar-komentar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #999999;
+}
+
+/* Modul 5 - Tombol kembali ke atas (opsional) */
+.btn-atas {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    margin: 0;
+}
+
+.btn-atas.tampil {
+    display: block;
+}
