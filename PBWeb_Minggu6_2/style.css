@@ -1,0 +1,198 @@
+:root {
+  --biru: #2563a8;
+  --biru-tua: #1b4a80;
+  --merah: #d9534f;
+  --hijau: #3d9a50;
+  --abu: #667085;
+  --garis: #d0d7e2;
+  --latar: #e8f0fa;
+  --putih: #ffffff;
+  --kartu: #ffffff;
+  --teks: #1d2733;
+  --btn-sek: #d0d7e2;
+  --btn-sek-hover: #bcc5d3;
+  color-scheme: light;
+}
+
+
+:root[data-theme="dark"] {
+  --biru: #3b82d6;
+  --biru-tua: #6aa5ea;
+  --merah: #ef7c78;
+  --hijau: #4cb862;
+  --abu: #9aa5b8;
+  --garis: #3a4558;
+  --latar: #0f1620;
+  --kartu: #1a2332;
+  --teks: #e4e9f0;
+  --btn-sek: #2c384b;
+  --btn-sek-hover: #38465c;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--latar);
+  color: var(--teks);
+  transition: background .2s, color .2s;
+  line-height: 1.5;
+}
+
+.wrapper {
+  max-width: 640px;
+  margin: 32px auto;
+  padding: 0 16px 40px;
+}
+
+
+.judul {
+  position: relative;
+  background: var(--biru);
+  color: var(--putih);
+  text-align: center;
+  padding: 20px 16px;
+  border-radius: 10px 10px 0 0;
+}
+.judul h1 { margin: 0; font-size: 1.4rem; }
+.judul p { margin: 4px 0 0; font-size: .9rem; opacity: .9; }
+.bintang { color: var(--merah); }
+.judul .bintang { color: #ffd2d0; }
+
+
+.tema {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  font: inherit;
+  font-size: 1.1rem;
+  color: var(--putih);
+  background: rgba(255, 255, 255, .18);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tema:hover { background: rgba(255, 255, 255, .3); }
+
+
+form {
+  background: var(--kartu);
+  padding: 8px 24px 24px;
+  border: 1px solid var(--garis);
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.seksi {
+  margin: 24px 0 14px;
+  padding-left: 10px;
+  font-size: 1.05rem;
+  color: var(--biru-tua);
+  border-left: 4px solid var(--biru);
+}
+
+.field { margin-bottom: 14px; }
+.baris { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+
+label, .label-grup {
+  display: block;
+  margin-bottom: 4px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 9px 11px;
+  font: inherit;
+  color: var(--teks);
+  background: var(--kartu);
+  border: 1.5px solid var(--garis);
+  border-radius: 6px;
+  transition: border-color .2s, box-shadow .2s;
+}
+textarea { resize: vertical; }
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--biru);
+  box-shadow: 0 0 0 3px rgba(37, 99, 168, .15);
+}
+
+.touched:invalid { border-color: var(--merah); }
+.touched:valid { border-color: var(--hijau); }
+
+.petunjuk {
+  display: block;
+  margin-top: 3px;
+  font-size: .8rem;
+  color: var(--abu);
+}
+
+.error {
+  display: block;
+  margin-top: 3px;
+  font-size: .82rem;
+  color: var(--merah);
+}
+.error:empty { display: none; }
+
+/* Radio */
+.radio-grup { display: flex; gap: 20px; flex-wrap: wrap; padding-top: 6px; }
+.pilihan {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Indikator kekuatan password */
+.kekuatan {
+  height: 5px;
+  margin-top: 6px;
+  background: var(--garis);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.kekuatan div { height: 100%; width: 0; transition: width .25s, background .25s; }
+
+/* Tombol */
+.tombol-grup { display: flex; gap: 10px; margin-top: 22px; }
+.btn {
+  padding: 10px 22px;
+  font: inherit;
+  font-weight: 600;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn-utama { background: var(--biru); color: var(--putih); }
+.btn-utama:hover { filter: brightness(.88); }
+.btn-sekunder { background: var(--btn-sek); color: var(--teks); }
+.btn-sekunder:hover { background: var(--btn-sek-hover); }
+
+.catatan {
+  margin-top: 16px;
+  font-size: .78rem;
+  text-align: center;
+  color: var(--abu);
+}
+
+@media (max-width: 560px) {
+  .baris { grid-template-columns: 1fr; }
+  .tombol-grup { flex-direction: column; }
+  form { padding: 8px 16px 20px; }
+}

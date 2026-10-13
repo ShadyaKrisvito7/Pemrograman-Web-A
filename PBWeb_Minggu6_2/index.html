@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendaftaran Mahasiswa Baru</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  </script>
+</head>
+<body>
+  <main class="wrapper">
+    <header class="judul">
+      <button type="button" id="tombolTema" class="tema" aria-label="Ganti mode gelap/terang"></button>
+      <h1>Pendaftaran Mahasiswa Baru</h1>
+      <p>Kolom bertanda <span class="bintang">*</span> wajib diisi.</p>
+    </header>
+
+    <form id="formDaftar" novalidate>
+
+      <h2 class="seksi">Data Pribadi</h2>
+
+      <div class="field">
+        <label for="nama">Nama Lengkap <span class="bintang">*</span></label>
+        <input type="text" id="nama" name="nama" required
+               minlength="3" maxlength="60"
+               pattern="[A-Za-z][A-Za-z .'\-]*"
+               placeholder="Sesuai ijazah" autocomplete="name">
+        <span class="error" id="err-nama" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="bintang">*</span></label>
+        <input type="email" id="email" name="email" required
+               maxlength="80" placeholder="nama@email.com" autocomplete="email">
+        <span class="error" id="err-email" role="alert"></span>
+      </div>
+
+      <div class="baris">
+        <div class="field">
+          <label for="hp">No. HP / WhatsApp <span class="bintang">*</span></label>
+          <input type="tel" id="hp" name="hp" required
+                 pattern="(\+62|62|0)8[0-9]{8,11}"
+                 placeholder="08123456789" autocomplete="tel">
+          <span class="error" id="err-hp" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="tglLahir">Tanggal Lahir <span class="bintang">*</span></label>
+          <input type="date" id="tglLahir" name="tglLahir" required>
+          <span class="error" id="err-tglLahir" role="alert"></span>
+        </div>
+      </div>
+
+      <div class="baris">
+        <div class="field">
+          <span class="label-grup" id="lbl-gender">Jenis Kelamin <span class="bintang">*</span></span>
+          <div class="radio-grup" role="radiogroup" aria-labelledby="lbl-gender">
+            <label class="pilihan"><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
+            <label class="pilihan"><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+          </div>
+          <span class="error" id="err-gender" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="agama">Agama <span class="bintang">*</span></label>
+          <select id="agama" name="agama" required>
+            <option value="">-- Pilih agama --</option>
+            <option>Islam</option>
+            <option>Kristen Protestan</option>
+            <option>Katolik</option>
+            <option>Hindu</option>
+            <option>Buddha</option>
+            <option>Konghucu</option>
+          </select>
+          <span class="error" id="err-agama" role="alert"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="alamat">Alamat Asal <span class="bintang">*</span></label>
+        <textarea id="alamat" name="alamat" required rows="3"
+                  minlength="10" maxlength="150"
+                  placeholder="Nama jalan, RT/RW, desa/kelurahan, kecamatan"></textarea>
+        <span class="error" id="err-alamat" role="alert"></span>
+      </div>
+
+      <div class="baris">
+        <div class="field">
+          <label for="kota">Kabupaten / Kota <span class="bintang">*</span></label>
+          <input type="text" id="kota" name="kota" required
+                 minlength="3" maxlength="50"
+                 pattern="[A-Za-z][A-Za-z .'\-]*"
+                 placeholder="Mis. Sleman">
+          <span class="error" id="err-kota" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="provinsi">Provinsi <span class="bintang">*</span></label>
+          <input type="text" id="provinsi" name="provinsi" required
+                 minlength="3" maxlength="50"
+                 pattern="[A-Za-z][A-Za-z .'\-]*"
+                 placeholder="Mis. DI Yogyakarta">
+          <span class="error" id="err-provinsi" role="alert"></span>
+        </div>
+      </div>
+
+      <h2 class="seksi">Data Akademik</h2>
+
+      <div class="field">
+        <label for="sekolah">Asal Sekolah <span class="bintang">*</span></label>
+        <input type="text" id="sekolah" name="sekolah" required
+               minlength="3" maxlength="80" placeholder="Mis. SMA Negeri 1 Yogyakarta">
+        <span class="error" id="err-sekolah" role="alert"></span>
+      </div>
+
+      <div class="baris">
+        <div class="field">
+          <label for="nilai">Rata-rata Nilai Rapor <span class="bintang">*</span></label>
+          <input type="number" id="nilai" name="nilai" required
+                 min="60" max="100" step="0.01" placeholder="60 – 100" inputmode="decimal">
+          <span class="error" id="err-nilai" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="jalur">Jalur Pendaftaran <span class="bintang">*</span></label>
+          <select id="jalur" name="jalur" required>
+            <option value="">-- Pilih jalur --</option>
+            <option>Prestasi Rapor</option>
+            <option>Tes Tulis</option>
+            <option>Beasiswa</option>
+          </select>
+          <span class="error" id="err-jalur" role="alert"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="prodi">Program Studi Pilihan <span class="bintang">*</span></label>
+        <select id="prodi" name="prodi" required>
+          <option value="">-- Pilih program studi --</option>
+          <option>Teknik Informatika</option>
+          <option>Sistem Informasi</option>
+          <option>Teknik Elektro</option>
+          <option>Manajemen</option>
+          <option>Akuntansi</option>
+        </select>
+        <span class="error" id="err-prodi" role="alert"></span>
+      </div>
+
+      <h2 class="seksi">Akun Pendaftaran</h2>
+
+      <div class="field">
+        <label for="username">Username <span class="bintang">*</span></label>
+        <input type="text" id="username" name="username" required
+               pattern="[a-z0-9_]{4,15}"
+               placeholder="huruf kecil, angka, underscore" autocomplete="username">
+        <span class="petunjuk">4–15 karakter: huruf kecil, angka, atau underscore.</span>
+        <span class="error" id="err-username" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="password">Password <span class="bintang">*</span></label>
+        <input type="password" id="password" name="password" required
+               minlength="8" maxlength="64"
+               pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}"
+               autocomplete="new-password">
+        <div class="kekuatan" aria-hidden="true"><div id="kekuatanBar"></div></div>
+        <span class="petunjuk" id="kekuatanTeks">Minimal 8 karakter, kombinasi huruf besar, huruf kecil, dan angka.</span>
+        <span class="error" id="err-password" role="alert"></span>
+      </div>
+
+      <div class="field">
+        <label for="konfirmasi">Konfirmasi Password <span class="bintang">*</span></label>
+        <input type="password" id="konfirmasi" name="konfirmasi" required autocomplete="new-password">
+        <span class="error" id="err-konfirmasi" role="alert"></span>
+      </div>
+
+      <div class="tombol-grup">
+        <button type="submit" class="btn btn-utama">Kirim Pendaftaran</button>
+        <button type="reset" class="btn btn-sekunder">Reset</button>
+      </div>
+    </form>
+
+    <p class="catatan">
+      Validasi di browser hanya untuk kenyamanan pengguna; pada aplikasi nyata data tetap divalidasi ulang di server.
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
